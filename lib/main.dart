@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider_explained_for_beginners/model/counting_the_number.dart';
+import 'package:flutter_provider_explained_for_beginners/view/my_home_page.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    // ChangeNotifierProvider, unlike ChangeNotifier, comes from the Provider package
+    // and it provides an instance of a ChangeNotifier to the widgets,
+    // which have already subscribed to it
+    // we should place the ChangeNotifierProvider Just above the widgets that need to access it.
+    // you will understand provider better if you already have understood how
+    // InheritedWidget works
+    ChangeNotifierProvider(
+      create: (context) =>
+          CountingTheNumber(), // designed Model is provided to the desired widgets
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -9,19 +24,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Provider Explained to Beginners',
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: FlutterProviderExplainedToBeginners(),
+      home: MyHomePage(),
     );
-  }
-}
-
-class FlutterProviderExplainedToBeginners extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
