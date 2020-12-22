@@ -56,8 +56,7 @@ class AVeryDeepWidgetTree extends StatelessWidget {
                   SizedBox(
                     height: 5.0,
                   ),
-
-                  /// However, the whole top widgets will remain unaffected when state changes
+                  // However, the whole top widgets will remain unaffected when state changes
                   ColumnClass(),
                 ],
               ),
