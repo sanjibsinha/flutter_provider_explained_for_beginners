@@ -6,20 +6,20 @@ class ColumnClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     /// Only this widget will be rebuilt
-    final CountingTheNumber counter = Provider.of<CountingTheNumber>(context);
+    final CountingTheNumber message = Provider.of<CountingTheNumber>(context);
     return Column(
       children: [
         Text(
-          '${counter.number}',
+          '${message.message}',
           style: TextStyle(fontSize: 25.0),
         ),
         SizedBox(height: 10.0),
         FloatingActionButton(
           onPressed: () {
-            counter.increaseNumber();
+            message.testMessage();
           },
           tooltip: 'Increment',
-          child: Icon(Icons.add),
+          child: Icon(Icons.ac_unit_rounded),
         )
       ],
     );

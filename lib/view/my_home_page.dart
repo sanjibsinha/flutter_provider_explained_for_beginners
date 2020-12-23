@@ -21,17 +21,22 @@ class AVeryDeepWidgetTree extends StatelessWidget {
     // ‘Provider.of’, just like Consumer needs to know the type of the model.
     // We need to specify the model ‘CountingTheNumber’.
     return Container(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'This is a simple Text widget',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 45.0,
-              fontWeight: FontWeight.bold,
-            ),
+            'This Text and Image are on the top',
+            style: TextStyle(fontSize: 20.0),
+          ),
+          Container(
+            width: 350.0,
+            height: 200.0,
+            child: Image.network(
+                'https://i0.wp.com/zerodotone.net/wp-content/uploads/2020/12/cropped-zerodotone-beginnrers.jpg?fit=1320%2C743&ssl=1'),
+          ),
+          SizedBox(
+            height: 5.0,
           ),
           //now we are going to build a very deep widget tree
           Center(
@@ -40,9 +45,9 @@ class AVeryDeepWidgetTree extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'This is another simple Text widget deep inside the tree.',
+                    'This widget is below image.',
                     style: TextStyle(
-                      fontSize: 35.0,
+                      fontSize: 25.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -50,8 +55,8 @@ class AVeryDeepWidgetTree extends StatelessWidget {
                     height: 5.0,
                   ),
                   Text(
-                    'You have pushed the button this many times:',
-                    style: TextStyle(fontSize: 35.0),
+                    'Press the button below to see text changes:',
+                    style: TextStyle(fontSize: 25.0),
                   ),
                   SizedBox(
                     height: 5.0,
