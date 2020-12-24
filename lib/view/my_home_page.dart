@@ -22,8 +22,10 @@ class AVeryDeepWidgetTree extends StatelessWidget {
     // We need to specify the model ‘CountingTheNumber’.
     return Container(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: ListView(
+        padding: const EdgeInsets.all(
+          10.0,
+        ),
         children: <Widget>[
           Text(
             'This Text and Image are on the top',
