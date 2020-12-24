@@ -31,7 +31,7 @@ class AVeryDeepWidgetTree extends StatelessWidget {
           ),
           Container(
             width: 350.0,
-            height: 200.0,
+            height: 250.0,
             child: Image.network(
                 'https://i0.wp.com/zerodotone.net/wp-content/uploads/2020/12/cropped-zerodotone-beginnrers.jpg?fit=1320%2C743&ssl=1'),
           ),
