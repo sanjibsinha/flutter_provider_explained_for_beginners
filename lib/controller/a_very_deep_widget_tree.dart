@@ -55,8 +55,8 @@ class ColumnClass extends StatelessWidget {
                 ),
                 const Divider(
                   color: Colors.black,
-                  height: 20,
-                  thickness: 5,
+                  height: 60,
+                  thickness: 15,
                   indent: 20,
                   endIndent: 0,
                 ),
