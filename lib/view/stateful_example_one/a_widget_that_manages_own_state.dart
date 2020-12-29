@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+///
+
 class AWidgetThatManagesOwnState extends StatefulWidget {
   @override
   _AWidgetThatManagesOwnStateState createState() =>
