@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_explained_for_beginners/model/counting_the_number.dart';
 import 'package:flutter_provider_explained_for_beginners/view/my_home_page.dart';
+import 'package:flutter_provider_explained_for_beginners/view/stateful_example_one/stateful_example_one.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      // home: MyHomePage(),
+      home: StateFulExampleOne(),
     );
   }
 }
